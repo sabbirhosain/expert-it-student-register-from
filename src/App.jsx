@@ -9,6 +9,8 @@ import Courses from "./pages/Courses";
 import Student from "./pages/Student";
 import Setting from "./pages/Setting";
 import NotFound from "./pages/NotFound";
+import Users from "./pages/Users";
+import Expense from "./pages/Expense";
 
 function App() {
   return (
@@ -18,8 +20,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Dashboard />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/users" element={<Users />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/student" element={<Student />} />
+        <Route path="/students" element={<Student />} />
+        <Route path="/expense" element={<Expense />} />
         <Route path="/setting" element={<Setting />} />
         <Route path="notfound" element={<NotFound />} />
       </Routes>

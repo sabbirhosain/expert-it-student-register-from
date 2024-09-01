@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import AddUserModel from '../components/Users/AddUserModel'
+import UpdateUserModel from '../components/Users/UpdateUserModel'
+import UserTable from '../components/Users/UserTable'
 import Layout from '../layout/Layout'
 import Select from 'react-select';
-import AddStudentModel from '../components/Students/AddStudentModel';
-import UpdateStudentModel from '../components/Students/UpdateStudentModel';
-import StudentTable from '../components/Students/StudentTable';
 
-const Student = () => {
+const Users = () => {
   const [userList, setUserList] = useState()
   const [loading, setLoading] = useState(false)
 
@@ -68,13 +68,13 @@ const Student = () => {
         </div>
 
         <div className='mt-2'>
-          <AddStudentModel />
-          <UpdateStudentModel />
-          <StudentTable />
+          <AddUserModel />
+          <UpdateUserModel />
+          <UserTable />
         </div>
       </section>
     </Layout>
   )
 }
 
-export default Student
+export default Users

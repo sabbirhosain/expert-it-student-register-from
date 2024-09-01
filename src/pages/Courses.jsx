@@ -1,8 +1,8 @@
-import React from 'react'
+import Layout from '../layout/Layout'
 
 const Courses = () => {
   return (
-    <div>Courses</div>
+    <Layout>Courses</Layout>
   )
 }
 

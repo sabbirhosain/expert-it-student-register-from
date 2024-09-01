@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../layout/Layout'
 
-const Setting = () => {
+const Expense = () => {
   return (
-    <Layout>Setting</Layout>
+    <Layout>Expense</Layout>
   )
 }
 
-export default Setting
+export default Expense
