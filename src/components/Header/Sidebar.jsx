@@ -20,7 +20,7 @@ const Sidebar = () => {
         <div className="sidebar">
             <div className="offcanvas offcanvas-start offcanvas_sidebar" tabIndex={-1} id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div className="offcanvas-header justify-content-center">
-                    <NavLink to={"/"} className="d-flex align-items-center justify-content-center text-uppercase fw-bold fs-5">Expert It Solutions</NavLink>
+                    <NavLink to={"/"} className="d-flex align-items-center justify-content-center text-uppercase fw-bold">Expert It Solutions</NavLink>
                     {/* <button type="button" className="btn-close offcanvas_close_btn" data-bs-dismiss="offcanvas" aria-label="Close"></button> */}
                 </div>
                 <div className="offcanvas-body">
@@ -29,12 +29,6 @@ const Sidebar = () => {
                         <li className="dropdown_list">
                             <NavLink to={"/"} className="dropdown_btn">
                                 <span className="dropdown_list_name"><MdDashboardCustomize className="dropdown_list_icon" />Dashboard</span>
-                            </NavLink>
-                        </li>
-
-                        <li className="dropdown_list">
-                            <NavLink to={"/users"} className="dropdown_btn">
-                                <span className="dropdown_list_name"><HiMiniUsers className="dropdown_list_icon" />Users</span>
                             </NavLink>
                         </li>
 
@@ -57,14 +51,20 @@ const Sidebar = () => {
                             <li className="dropdown_list">
                                 <NavLink to={"/courses"} className="dropdown_btn">
                                     <span className="dropdown_list_name">
-                                        <IoBook className="dropdown_list_icon" />Courses</span>
+                                        <IoBook className="dropdown_list_icon" />Courses List</span>
                                 </NavLink>
                             </li>
 
                             <li className="dropdown_list">
                                 <NavLink to={"/students"} className="dropdown_btn">
                                     <span className="dropdown_list_name">
-                                        <PiStudentBold className="dropdown_list_icon" />Students</span>
+                                        <PiStudentBold className="dropdown_list_icon" />Students List</span>
+                                </NavLink>
+                            </li>
+
+                            <li className="dropdown_list">
+                                <NavLink to={"/trainer"} className="dropdown_btn">
+                                    <span className="dropdown_list_name"><HiMiniUsers className="dropdown_list_icon" />Trainer List</span>
                                 </NavLink>
                             </li>
 

@@ -1,11 +1,11 @@
 
 .sidebar {
-    width: 250px;
+    width: 220px;
     max-height: 100vh;
 }
 
 .offcanvas_sidebar {
-    width: 250px !important;
+    width: 220px !important;
     height: 100vh !important;
 }
 

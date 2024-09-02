@@ -10,9 +10,9 @@ const Student = () => {
   const [loading, setLoading] = useState(false)
 
   const options = [
-    { value: '1', label: 'Super Admin' },
-    { value: '2', label: 'Accountant' },
-    { value: '3', label: 'User' },
+    { value: "1", label: "Basic Computer with MS Office" },
+    { value: "2", label: "Web Design" },
+    { value: "3", label: "Graphic Design" },
   ]
 
   const handleChange = (selectedUserType) => {
@@ -32,7 +32,7 @@ const Student = () => {
       <section className=''>
 
         <div className='d-flex align-items-center justify-content-between bg-white p-3 my-2'>
-          <h4>User List</h4>
+          <h4>Students List</h4>
           <button className='btn btn-outline-dark rounded-0' data-bs-toggle="modal" data-bs-target="#exampleModal">Add New</button>
         </div>
 
@@ -44,7 +44,7 @@ const Student = () => {
                 value={userList}
                 onChange={handleChange}
                 isLoading={loading}
-                placeholder={loading ? "Loading..." : "Select User Type..."}
+                placeholder={loading ? "Loading..." : "Select Courses Type..."}
                 isClearable={true}
                 styles={customStyles}
               />

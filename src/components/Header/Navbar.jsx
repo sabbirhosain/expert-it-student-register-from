@@ -4,6 +4,7 @@ import "./NavStyle.css";
 import { BiLogOut } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { SlSettings } from "react-icons/sl";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
     return (
@@ -30,12 +31,12 @@ const Navbar = () => {
                         <div className="btn-group">
                             <button
                                 type="button"
-                                className="btn btn-outline-dark rounded-0 text-uppercase dropdown-toggle btn-sm "
+                                className="btn btn-outline-dark rounded-0 text-uppercase dropdown-toggle btn-sm"
                                 data-bs-toggle="dropdown"
                                 data-bs-display="static"
                                 aria-expanded="false"
                             >
-                                sabbir
+                            Sabbir Hosain
                             </button>
                             <ul className="dropdown-menu dropdown-menu-end mt-2 py-0 rounded-0">
                                 <li>

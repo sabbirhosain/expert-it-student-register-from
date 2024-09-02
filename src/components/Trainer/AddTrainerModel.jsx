@@ -1,37 +1,11 @@
-import { useState } from 'react';
-import Select from 'react-select';
-
-const AddUserModel = () => {
-  const [userList, setUserList] = useState();
-  const [loading, setLoading] = useState(false);
-
-  const options = [
-    { value: "1", label: "User" },
-    { value: "2", label: "Manager" },
-  ];
-
-  const handleChange = (selectedUserType) => {
-    setUserList(selectedUserType);
-  };
-
-  const customStyles = {
-    control: (styles) => ({
-      ...styles,
-      backgroundColor: "white",
-      border: "1px solid #dee2e6",
-      borderRadius: "0px",
-    }),
-  };
-
+const AddTrainerModel = () => {
   return (
     <div class="modal fade" id="exampleModal">
       <div class="modal-dialog modal-lg">
         <div class="modal-content rounded-0">
           <form action="">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Modal title
-              </h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Trainer</h1>
               <button
                 type="button"
                 class="btn-close"
@@ -50,7 +24,7 @@ const AddUserModel = () => {
                   <input type="text" className="form-control rounded-0" />
                 </div>
                 <div className="col-md-6 mb-3">
-                  <label className="form-label">User Name</label>
+                  <label className="form-label">Phone Number</label>
                   <input type="text" className="form-control rounded-0" />
                 </div>
                 <div className="col-md-6 mb-3">
@@ -58,28 +32,12 @@ const AddUserModel = () => {
                   <input type="text" className="form-control rounded-0" />
                 </div>
                 <div className="col-md-6 mb-3">
-                  <label className="form-label">Phone Number</label>
+                  <label className="form-label">Expert In</label>
                   <input type="text" className="form-control rounded-0" />
                 </div>
                 <div className="col-md-6 mb-3">
-                  <label className="form-label">User Type</label>
-                  <Select
-                      options={options}
-                      value={userList}
-                      onChange={handleChange}
-                      isLoading={loading}
-                      placeholder={ loading ? "Loading..." : "Select User Type..."}
-                      isClearable={true}
-                      styles={customStyles}
-                    />
-                </div>
-                <div className="col-md-6 mb-3">
-                  <label className="form-label">Password</label>
-                  <input type="text" className="form-control rounded-0" />
-                </div>
-                <div className="col-md-6 mb-3">
-                  <label className="form-label">Confirm Password</label>
-                  <input type="text" className="form-control rounded-0" />
+                  <label className="form-label">Photo</label>
+                  <input type="file" className="form-control rounded-0" />
                 </div>
               </div>
             </div>
@@ -98,4 +56,4 @@ const AddUserModel = () => {
   );
 };
 
-export default AddUserModel;
+export default AddTrainerModel;

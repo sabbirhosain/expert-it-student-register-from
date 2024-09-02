@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import Select from 'react-select';
 
-const AddStudentModel = () => {
+const AddCoursesModel = () => {
     const [userList, setUserList] = useState();
     const [loading, setLoading] = useState(false);
 
     const options = [
-        { value: "1", label: "Basic Computer with MS Office" },
-        { value: "2", label: "Web Design" },
-        { value: "3", label: "Graphic Design" },
+        { value: "1", label: "Sabbir Hosain" },
+        { value: "2", label: "Raihan Reza" },
     ];
 
     const handleChange = (selectedUserType) => {
@@ -30,9 +29,7 @@ const AddStudentModel = () => {
                 <div class="modal-content rounded-0">
                     <form action="">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">
-                                New Admission Student
-                            </h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Create New Courses</h1>
                             <button
                                 type="button"
                                 class="btn-close"
@@ -43,68 +40,36 @@ const AddStudentModel = () => {
                         <div class="modal-body">
                             <div className="row">
                                 <div className="col-md-6 mb-3">
-                                    <label className="form-label">First Name</label>
-                                    <input type="text" className="form-control rounded-0" />
-                                </div>
-                                <div className="col-md-6 mb-3">
-                                    <label className="form-label">Last Name</label>
-                                    <input type="text" className="form-control rounded-0" />
-                                </div>
-                                <div className="col-md-6 mb-3">
-                                    <label className="form-label">Father's Name</label>
-                                    <input type="text" className="form-control rounded-0" />
-                                </div>
-                                <div className="col-md-6 mb-3">
-                                    <label className="form-label">Mother's Name</label>
-                                    <input type="text" className="form-control rounded-0" />
-                                </div>
-                                <div className="col-md-6 mb-3">
-                                    <label className="form-label">Phone Number</label>
-                                    <input type="text" className="form-control rounded-0" />
-                                </div>
-                                <div className="col-md-6 mb-3">
-                                    <label className="form-label">Blood Group</label>
-                                    <input type="text" className="form-control rounded-0" />
-                                </div>
-                                <div className="col-md-6 mb-3">
                                     <label className="form-label">Courses Name</label>
+                                    <input type="text" className="form-control rounded-0" />
+                                </div>
+                                <div className="col-md-6 mb-3">
+                                    <label className="form-label">Trainer Name</label>
                                     <Select
                                         options={options}
                                         value={userList}
                                         onChange={handleChange}
                                         isLoading={loading}
-                                        placeholder={loading ? "Loading..." : "Select Courses..."}
+                                        placeholder={loading ? "Loading..." : "Select name..."}
                                         isClearable={true}
                                         styles={customStyles}
                                     />
                                 </div>
                                 <div className="col-md-6 mb-3">
                                     <label className="form-label">Courses Duration</label>
-                                    <input type="text" className="form-control rounded-0" readOnly/>
+                                    <input type="text" className="form-control rounded-0" />
                                 </div>
                                 <div className="col-md-6 mb-3">
                                     <label className="form-label">Courses Fee</label>
-                                    <input type="text" className="form-control rounded-0" readOnly/>
-                                </div>
-                                <div className="col-md-6 mb-3">
-                                    <label className="form-label">Courses Fee Payment</label>
                                     <input type="text" className="form-control rounded-0" />
                                 </div>
                                 <div className="col-md-6 mb-3">
-                                    <label className="form-label">Batch No</label>
+                                    <label className="form-label">Class Per Week</label>
                                     <input type="text" className="form-control rounded-0" />
                                 </div>
                                 <div className="col-md-6 mb-3">
-                                    <label className="form-label">Address</label>
+                                    <label className="form-label">Class Day</label>
                                     <input type="text" className="form-control rounded-0" />
-                                </div>
-                                <div className="col-md-6 mb-3">
-                                    <label className="form-label">Select Student Photo</label>
-                                    <input type="file" className="form-control rounded-0" />
-                                </div>
-                                <div className="col-md-6 mb-3">
-                                    <label className="form-label">Select NID/Birth File</label>
-                                    <input type="file" className="form-control rounded-0" />
                                 </div>
                             </div>
                         </div>
@@ -123,4 +88,4 @@ const AddStudentModel = () => {
     );
 }
 
-export default AddStudentModel
+export default AddCoursesModel
