@@ -58,6 +58,10 @@ const StudentTable = () => {
             selector: row => row.courses_fee_payment,
         },
         {
+            name: "Courses Fee Discount",
+            selector: row => row.courses_fee_discount,
+        },
+        {
             name: "Courses Fee due",
             selector: row => row.courses_fee_due,
         },
@@ -100,6 +104,7 @@ const StudentTable = () => {
             courses_duration: '6 Month',
             courses_fee: '5000.00',
             courses_fee_payment: '3000.00',
+            courses_fee_discount: '10%',
             courses_fee_due: '2000.00',
             class_per_week: '3 Days',
             class_per_week: '3 Days',
@@ -121,6 +126,7 @@ const StudentTable = () => {
             courses_duration: '6 Month',
             courses_fee: '5000.00',
             courses_fee_payment: '3000.00',
+            courses_fee_discount: '10%',
             courses_fee_due: '2000.00',
             class_per_week: '3 Days',
             class_per_week: '3 Days',

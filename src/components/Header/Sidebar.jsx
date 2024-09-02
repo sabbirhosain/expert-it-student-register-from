@@ -10,6 +10,7 @@ import { IoBook } from "react-icons/io5";
 import { FiDollarSign } from "react-icons/fi";
 // import logo from "../../assets/dashboard.png"
 import { NavLink, useLocation } from 'react-router-dom'
+import { LuFileSpreadsheet } from "react-icons/lu";
 import "./NavStyle.css"
 
 
@@ -65,6 +66,12 @@ const Sidebar = () => {
                             <li className="dropdown_list">
                                 <NavLink to={"/trainer"} className="dropdown_btn">
                                     <span className="dropdown_list_name"><HiMiniUsers className="dropdown_list_icon" />Trainer List</span>
+                                </NavLink>
+                            </li>
+
+                            <li className="dropdown_list">
+                                <NavLink to={"/attendance"} className="dropdown_btn">
+                                    <span className="dropdown_list_name"><LuFileSpreadsheet className="dropdown_list_icon" />Attendance Sheet</span>
                                 </NavLink>
                             </li>
 

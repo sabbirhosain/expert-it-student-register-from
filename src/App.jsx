@@ -11,6 +11,7 @@ import Setting from "./pages/Setting";
 import NotFound from "./pages/NotFound";
 import Expense from "./pages/Expense";
 import Trainer from "./pages/Trainer";
+import Attendance from "./pages/Attendance";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/trainer" element={<Trainer />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/students" element={<Student />} />
+        <Route path="/students" element={<Student />} /> 
+        <Route path="/attendance" element={<Attendance />} /> 
         <Route path="/expense" element={<Expense />} />
         <Route path="/setting" element={<Setting />} />
         <Route path="notfound" element={<NotFound />} />

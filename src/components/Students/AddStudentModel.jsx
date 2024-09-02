@@ -80,15 +80,19 @@ const AddStudentModel = () => {
                                 </div>
                                 <div className="col-md-6 mb-3">
                                     <label className="form-label">Courses Duration</label>
-                                    <input type="text" className="form-control rounded-0" readOnly/>
+                                    <input type="text" className="form-control rounded-0" readOnly />
                                 </div>
                                 <div className="col-md-6 mb-3">
                                     <label className="form-label">Courses Fee</label>
-                                    <input type="text" className="form-control rounded-0" readOnly/>
+                                    <input type="text" className="form-control rounded-0" readOnly />
                                 </div>
                                 <div className="col-md-6 mb-3">
                                     <label className="form-label">Courses Fee Payment</label>
                                     <input type="text" className="form-control rounded-0" />
+                                </div>
+                                <div className="col-md-6 mb-3">
+                                    <label className="form-label">Courses Fee Discount %</label>
+                                    <input type="number" className="form-control rounded-0" min="0" max="100" />
                                 </div>
                                 <div className="col-md-6 mb-3">
                                     <label className="form-label">Batch No</label>
@@ -99,11 +103,11 @@ const AddStudentModel = () => {
                                     <input type="text" className="form-control rounded-0" />
                                 </div>
                                 <div className="col-md-6 mb-3">
-                                    <label className="form-label">Select Student Photo</label>
+                                    <label className="form-label">Select Photo</label>
                                     <input type="file" className="form-control rounded-0" />
                                 </div>
                                 <div className="col-md-6 mb-3">
-                                    <label className="form-label">Select NID/Birth File</label>
+                                    <label className="form-label">Select Documents File</label>
                                     <input type="file" className="form-control rounded-0" />
                                 </div>
                             </div>

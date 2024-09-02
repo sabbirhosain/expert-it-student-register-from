@@ -52,7 +52,7 @@ const Navbar = () => {
                                 <hr className="dropdown-divider p-0 m-0" />
                                 <li>
                                     <Link
-                                        to={"/profile"}
+                                        to={"/"}
                                         className="dropdown-item d-flex align-items-center gap-2"
                                     >
                                         <CgProfile />
