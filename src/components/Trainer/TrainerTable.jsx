@@ -14,6 +14,10 @@ const TrainerTable = () => {
       maxWidth: "20px"
     },
     {
+      name: "Joining Date",
+      selector: row => row.joining_date,
+    },
+    {
       name: "Name",
       selector: row => row.name,
     },
@@ -52,6 +56,7 @@ const TrainerTable = () => {
       phone: '1234567890',
       expert_in: 'Web Design & Graphic Design',
       address: '1234567890', 
+      joining_date: '12-12-2023', 
 
     },
   ]

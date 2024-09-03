@@ -8,6 +8,7 @@ import { GrDashboard } from 'react-icons/gr'
 import { PiStudentBold } from "react-icons/pi";
 import { IoBook } from "react-icons/io5";
 import { FiDollarSign } from "react-icons/fi";
+import { BiRightArrow } from "react-icons/bi";
 // import logo from "../../assets/dashboard.png"
 import { NavLink, useLocation } from 'react-router-dom'
 import { LuFileSpreadsheet } from "react-icons/lu";
@@ -34,21 +35,7 @@ const Sidebar = () => {
                         </li>
 
                         <div className="accordion accordion-flush" id="accordionFlushExample">
-
-                            {/* <li className="dropdown_list">
-                                <button className="dropdown_btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsePaymenta" aria-expanded="false" aria-controls="flush-collapsePaymenta">
-                                    <span className="dropdown_list_name">
-                                        <MdAccountBalance className="dropdown_list_icon" />Accounts</span>
-                                    <IoIosArrowDown className="dropdown_icon" />
-                                </button>
-
-                                <div id="flush-collapsePaymenta" className={URL.pathname === "/accounts" || URL.pathname === "/payment-methods" || URL.pathname === "/account-statement" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingPaymenta" data-bs-parent="#accordionFlushExample">
-                                    <NavLink to={"/accounts"} className="dropdown_link">Chart of Accounts</NavLink>
-                                    <NavLink to={"/account-statement"} className="dropdown_link">Account Statement</NavLink>
-                                </div>
-                            </li> */}
-
-
+                            
                             <li className="dropdown_list">
                                 <NavLink to={"/courses"} className="dropdown_btn">
                                     <span className="dropdown_list_name">
@@ -57,21 +44,21 @@ const Sidebar = () => {
                             </li>
 
                             <li className="dropdown_list">
-                                <NavLink to={"/students"} className="dropdown_btn">
+                                <button className="dropdown_btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsePaymenta" aria-expanded="false" aria-controls="flush-collapsePaymenta">
                                     <span className="dropdown_list_name">
-                                        <PiStudentBold className="dropdown_list_icon" />Students List</span>
-                                </NavLink>
+                                        <PiStudentBold className="dropdown_list_icon" />Students</span>
+                                    <IoIosArrowDown className="dropdown_icon" />
+                                </button>
+
+                                <div id="flush-collapsePaymenta" className={URL.pathname === "/students" || URL.pathname === "/attendance" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingPaymenta" data-bs-parent="#accordionFlushExample">
+                                    <NavLink to={"/students"} className="dropdown_link"><BiRightArrow RightSFill className='dropdown_link_icon' />Student List</NavLink>
+                                    <NavLink to={"/attendance"} className="dropdown_link"><BiRightArrow className='dropdown_link_icon' />Attendance Sheet</NavLink>
+                                </div>
                             </li>
 
                             <li className="dropdown_list">
                                 <NavLink to={"/trainer"} className="dropdown_btn">
                                     <span className="dropdown_list_name"><HiMiniUsers className="dropdown_list_icon" />Trainer List</span>
-                                </NavLink>
-                            </li>
-
-                            <li className="dropdown_list">
-                                <NavLink to={"/attendance"} className="dropdown_btn">
-                                    <span className="dropdown_list_name"><LuFileSpreadsheet className="dropdown_list_icon" />Attendance Sheet</span>
                                 </NavLink>
                             </li>
 
