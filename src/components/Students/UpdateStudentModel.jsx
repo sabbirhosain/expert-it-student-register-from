@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Select from 'react-select';
+import img from "../../assets/medium.webp"
+import { BiTrash } from "react-icons/bi";
 
 const UpdateStudentModel = () => {
     const [userList, setUserList] = useState();
@@ -100,9 +102,25 @@ const UpdateStudentModel = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="reset" class="btn btn-secondary rounded-0">Reset</button>
-                            <button type="submit" class="btn btn-primary rounded-0">Submit</button>
+                        <div class="modal-footer justify-content-between">
+                            <div className='d-flex gap-2'>
+                                <div className='position-relative'>
+                                    <img src={img} style={{ maxWidth: "50px", maxHeight: "50px", objectFit: "cover" }} />
+                                    <BiTrash style={{ position: "absolute", right: "0px", top: "0px", color: "yellow", cursor: "pointer" }} />
+                                </div>
+                                <div className='position-relative'>
+                                    <img src={img} style={{ maxWidth: "50px", maxHeight: "50px", objectFit: "cover" }} />
+                                    <BiTrash style={{ position: "absolute", right: "0px", top: "0px", color: "yellow", cursor: "pointer" }} />
+                                </div>
+                                <div className='position-relative'>
+                                    <img src={img} style={{ maxWidth: "50px", maxHeight: "50px", objectFit: "cover" }} />
+                                    <BiTrash style={{ position: "absolute", right: "0px", top: "0px", color: "yellow", cursor: "pointer" }} />
+                                </div>
+                            </div>
+                            <div className='d-flex gap-2'>
+                                <button type="reset" class="btn btn-secondary rounded-0">Reset</button>
+                                <button type="submit" class="btn btn-primary rounded-0">Submit</button>
+                            </div>
                         </div>
                     </form>
                 </div>

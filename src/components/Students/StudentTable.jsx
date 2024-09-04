@@ -2,6 +2,7 @@ import { useState } from "react";
 import DataTable from "react-data-table-component"
 import { BiEditAlt, BiTrash } from "react-icons/bi";
 import { BsEyeFill } from "react-icons/bs";
+import { FaCheck } from "react-icons/fa6";
 
 const StudentTable = () => {
     const [error, setError] = useState(null)
@@ -11,7 +12,7 @@ const StudentTable = () => {
         {
             name: "Serial No.",
             selector: (row, index) => (index + 1),
-            maxWidth: "20px"
+            maxWidth: "30px"
         },
         {
             name: "Joining Date",
@@ -84,11 +85,12 @@ const StudentTable = () => {
         {
             name: "Action",
             cell: row => <div className="d-flex align-items-center gap-2">
-                <button data-bs-toggle="modal" data-bs-target="#updateModal" className="btn btn-outline-success rounded-0 btn-sm"><BiEditAlt /></button>
+                <button data-bs-toggle="modal" data-bs-target="#updateModal" className="btn btn-outline-primary rounded-0 btn-sm"><BiEditAlt /></button>
                 <button className="btn btn-outline-danger rounded-0 btn-sm"><BiTrash /></button>
-                <button className="btn btn-outline-primary rounded-0 btn-sm"><BsEyeFill /></button>
+                <button className="btn btn-outline-secondary rounded-0 btn-sm"><BsEyeFill /></button>
+                <button className="btn btn-outline-success rounded-0 btn-sm"><FaCheck /></button>
             </div>,
-            minWidth: "150px"
+            minWidth: "200px"
         }
     ];
 
