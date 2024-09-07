@@ -88,11 +88,11 @@ const AddStudentModel = () => {
                                     <input type="text" className="form-control rounded-0" readOnly />
                                 </div>
                                 <div className="col-md-6 mb-3">
-                                    <label className="form-label">Courses Fee Payment</label>
+                                    <label className="form-label">Payment</label>
                                     <input type="text" className="form-control rounded-0" />
                                 </div>
                                 <div className="col-md-6 mb-3">
-                                    <label className="form-label">Courses Fee Discount %</label>
+                                    <label className="form-label">Discount %</label>
                                     <input type="number" className="form-control rounded-0" min="0" max="100" />
                                 </div>
                                 <div className="col-md-6 mb-3">
@@ -110,6 +110,10 @@ const AddStudentModel = () => {
                                 <div className="col-md-6 mb-3">
                                     <label className="form-label">Select Documents File</label>
                                     <input type="file" className="form-control rounded-0" />
+                                </div>
+                                <div className="col-md-6 mb-3">
+                                    <label className="form-label">Write Comments</label>
+                                    <textarea className="form-control rounded-0" rows="1" />
                                 </div>
                             </div>
                         </div>

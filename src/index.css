@@ -41,7 +41,8 @@ span {
 
 button,
 input,
-select {
+select,
+textarea {
   border: none;
   border-radius: 0px;
   outline: none;
