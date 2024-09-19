@@ -69,6 +69,7 @@ const AttendanceTable = () => {
   const data = [
     {
       id: "60c72b2f5f1b2c001f8e4e12",
+      roll_no: '01',
       student_name: "John Doe",
       attendance: [
         { "date": "2024-09-18", "absent": true },
@@ -80,6 +81,7 @@ const AttendanceTable = () => {
     },
     {
       id: "60c72b2f5f1b2c001f8e4e13",
+      roll_no: '01',
       student_name: "Jane Smith",
       attendance: [
         { "date": "2024-09-18", "present": true },
