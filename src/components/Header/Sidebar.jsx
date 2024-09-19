@@ -50,9 +50,11 @@ const Sidebar = () => {
                                     <IoIosArrowDown className="dropdown_icon" />
                                 </button>
 
-                                <div id="flush-collapsePaymenta" className={URL.pathname === "/students" || URL.pathname === "/attendance" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingPaymenta" data-bs-parent="#accordionFlushExample">
+                                <div id="flush-collapsePaymenta" className={URL.pathname === "/students" || URL.pathname === "/student-fee" || URL.pathname === "/attendance" ? `accordion-collapse collapse show` : `accordion-collapse collapse hide`} aria-labelledby="flush-headingPaymenta" data-bs-parent="#accordionFlushExample">
                                     <NavLink to={"/students"} className="dropdown_link"><BiRightArrow RightSFill className='dropdown_link_icon' />Student List</NavLink>
+                                    <NavLink to={"/student-fee"} className="dropdown_link"><BiRightArrow RightSFill className='dropdown_link_icon' />Student Fee</NavLink>
                                     <NavLink to={"/attendance"} className="dropdown_link"><BiRightArrow className='dropdown_link_icon' />Attendance Sheet</NavLink>
+                                    <NavLink to={"/student-history"} className="dropdown_link"><BiRightArrow className='dropdown_link_icon' />Student History</NavLink>
                                 </div>
                             </li>
 

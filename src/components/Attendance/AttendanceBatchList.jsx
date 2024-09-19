@@ -1,103 +1,77 @@
 import { useState } from "react";
 import DataTable from "react-data-table-component"
-import { BiEditAlt, BiTrash } from "react-icons/bi";
-import { BsEyeFill } from "react-icons/bs";
-import { FaCheck } from "react-icons/fa6";
-
-const StudentTable = () => {
+import { FcPrint, FcViewDetails } from "react-icons/fc";
+import { FaPlay } from "react-icons/fa";
+import { Link } from "react-router-dom";
+const AttendanceBatchList = () => {
     const [error, setError] = useState(null)
     const paginationOptions = { noRowsPerPage: true };
 
     const columns = [
         {
-            name: "Serial No.",
-            selector: (row, index) => (index + 1),
-            maxWidth: "30px"
-        },
-        {
-            name: "Joining Date",
+            name: "Date and Time",
             selector: row => row.joining_date,
-        },
-        {
-            name: "Student Name",
-            selector: row => row.student_name,
-        },
-        {
-            name: "Father's Name",
-            selector: row => row.father_name,
-        },
-        {
-            name: "Email Address",
-            selector: row => row.email_address,
-        },
-        {
-            name: "Phone Number",
-            selector: row => row.phone_number,
-        },
-        {
-            name: "Courses Name",
-            selector: row => row.courses_name,
-        },
-        {
-            name: "Courses Duration",
-            selector: row => row.courses_duration,
-        },
-        {
-            name: "Class Per week",
-            selector: row => row.class_per_week,
-        },
-        {
-            name: "Class Days",
-            selector: row => row.class_days,
-        },
-        {
-            name: "Courses Fee",
-            selector: row => row.courses_fee,
-        },
-        {
-            name: "Courses Fee Payments",
-            selector: row => row.courses_fee_payment,
-        },
-        {
-            name: "Courses Fee Discount",
-            selector: row => row.courses_fee_discount,
-        },
-        {
-            name: "Courses Fee due",
-            selector: row => row.courses_fee_due,
         },
         {
             name: "Batch No",
             selector: row => row.batch_no,
         },
         {
+            name: "Course Name",
+            selector: row => row.student_name,
+        },
+        {
             name: "Trainer Name",
-            selector: row => row.trainer_name,
+            selector: row => row.courses_name,
         },
         {
-            name: "Blood Group",
-            selector: row => row.blood_group,
+            name: "Total Student",
+            selector: row => row.father_name,
         },
         {
-            name: "Address",
-            selector: row => row.address,
+            name: "Present Student",
+            selector: row => row.phone_number,
+        },
+        {
+            name: "Absent Student",
+            selector: row => row.email_address,
+        },
+        {
+            name: "Status",
+            selector: row => row.attendance_status,
+            conditionalCellStyles: [
+                {
+                    when: row => row.attendance === 'success',
+                    style: {
+                        color: 'white',
+                        backgroundColor: 'green',
+                    },
+                },
+                {
+                    when: row => row.attendance === 'panding',
+                    style: {
+                        backgroundColor: 'red',
+                        color: 'white',
+                    },
+                },
+            ],
         },
         {
             name: "Action",
             cell: row => <div className="d-flex align-items-center gap-2">
-                <button data-bs-toggle="modal" data-bs-target="#updateModal" className="btn btn-outline-primary rounded-0 btn-sm"><BiEditAlt /></button>
-                <button className="btn btn-outline-danger rounded-0 btn-sm"><BiTrash /></button>
-                <button className="btn btn-outline-secondary rounded-0 btn-sm"><BsEyeFill /></button>
-                <button className="btn btn-outline-success rounded-0 btn-sm"><FaCheck /></button>
+                <Link to='/attendance-student' className="btn btn-outline-danger rounded-0 btn-sm"><FaPlay /></Link>
+                <button className="btn btn-outline-success rounded-0 btn-sm"><FcViewDetails /></button>
+                <button className="btn btn-outline-warning rounded-0 btn-sm"><FcPrint /></button>
             </div>,
-            minWidth: "200px"
         }
     ];
 
     const data = [
         {
             id: 1,
-            joining_date: '12-12-2024',
+            joining_date: '10-12-2024',
+            attendance: 'panding',
+            attendance_status: 'Attendance Not Taken',
             student_name: 'Sabbir hosain',
             father_name: 'Sobuj ali',
             email_address: 'sabbir@gmail.com',
@@ -118,7 +92,9 @@ const StudentTable = () => {
         },
         {
             id: 1,
-            joining_date: '12-12-2024',
+            joining_date: '10-12-2024',
+            attendance: 'success',
+            attendance_status: 'Attendance Is Taken',
             student_name: 'Sabbir hosain',
             father_name: 'Sobuj ali',
             email_address: 'sabbir@gmail.com',
@@ -154,6 +130,7 @@ const StudentTable = () => {
             </>
         )
     }
+
 }
 
-export default StudentTable
+export default AttendanceBatchList

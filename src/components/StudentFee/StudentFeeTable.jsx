@@ -1,22 +1,25 @@
 import { useState } from "react";
 import DataTable from "react-data-table-component"
-import { BiEditAlt, BiTrash } from "react-icons/bi";
+import { BiEditAlt } from "react-icons/bi";
+import { RiMessage2Line } from "react-icons/ri";
 import { BsEyeFill } from "react-icons/bs";
-import { FaCheck } from "react-icons/fa6";
 
-const StudentTable = () => {
+const StudentFeeTable = () => {
     const [error, setError] = useState(null)
     const paginationOptions = { noRowsPerPage: true };
 
     const columns = [
         {
-            name: "Serial No.",
-            selector: (row, index) => (index + 1),
-            maxWidth: "30px"
+            name: "Current Payable Date",
+            selector: row => row.joining_date,
         },
         {
-            name: "Joining Date",
+            name: "Next Payable Date",
             selector: row => row.joining_date,
+        },
+        {
+            name: "Batch No",
+            selector: row => row.batch_no,
         },
         {
             name: "Student Name",
@@ -27,12 +30,12 @@ const StudentTable = () => {
             selector: row => row.father_name,
         },
         {
-            name: "Email Address",
-            selector: row => row.email_address,
-        },
-        {
             name: "Phone Number",
             selector: row => row.phone_number,
+        },
+        {
+            name: "Email Address",
+            selector: row => row.email_address,
         },
         {
             name: "Courses Name",
@@ -43,40 +46,16 @@ const StudentTable = () => {
             selector: row => row.courses_duration,
         },
         {
-            name: "Class Per week",
-            selector: row => row.class_per_week,
-        },
-        {
-            name: "Class Days",
-            selector: row => row.class_days,
-        },
-        {
             name: "Courses Fee",
             selector: row => row.courses_fee,
         },
         {
-            name: "Courses Fee Payments",
-            selector: row => row.courses_fee_payment,
+            name: "Total Payable",
+            selector: row => row.courses_fee,
         },
         {
-            name: "Courses Fee Discount",
-            selector: row => row.courses_fee_discount,
-        },
-        {
-            name: "Courses Fee due",
+            name: "Current due",
             selector: row => row.courses_fee_due,
-        },
-        {
-            name: "Batch No",
-            selector: row => row.batch_no,
-        },
-        {
-            name: "Trainer Name",
-            selector: row => row.trainer_name,
-        },
-        {
-            name: "Blood Group",
-            selector: row => row.blood_group,
         },
         {
             name: "Address",
@@ -86,11 +65,11 @@ const StudentTable = () => {
             name: "Action",
             cell: row => <div className="d-flex align-items-center gap-2">
                 <button data-bs-toggle="modal" data-bs-target="#updateModal" className="btn btn-outline-primary rounded-0 btn-sm"><BiEditAlt /></button>
-                <button className="btn btn-outline-danger rounded-0 btn-sm"><BiTrash /></button>
+                <a href="mailto:example@example.com?subject=Inquiry&body=Hello, I have a question about..." className="btn btn-outline-success rounded-0 btn-sm"><RiMessage2Line /></a>
+                {/* <button className="btn btn-outline-success rounded-0 btn-sm"><BiMessageCheck /></button> */}
                 <button className="btn btn-outline-secondary rounded-0 btn-sm"><BsEyeFill /></button>
-                <button className="btn btn-outline-success rounded-0 btn-sm"><FaCheck /></button>
             </div>,
-            minWidth: "200px"
+            minWidth: "150px"
         }
     ];
 
@@ -156,4 +135,4 @@ const StudentTable = () => {
     }
 }
 
-export default StudentTable
+export default StudentFeeTable
