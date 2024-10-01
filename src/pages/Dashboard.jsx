@@ -17,7 +17,7 @@ const Dashboard = () => {
               <div className="card-body">
                 <div className="d-flex align-items-center gap-3">
                   <div className='card_icon'> <MdAttachMoney /> </div>
-                  <div> <h4>5,0000 TK</h4> <span>Total Amount</span></div>
+                  <div> <h4>0 TK</h4> <span>Total Amount</span></div>
                 </div>
               </div>
             </div>

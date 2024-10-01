@@ -3,6 +3,7 @@ import DataTable from "react-data-table-component"
 import { BiEditAlt, BiTrash } from "react-icons/bi";
 import { BsEyeFill } from "react-icons/bs";
 import { FaCheck } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const StudentTable = () => {
     const [error, setError] = useState(null)
@@ -87,7 +88,8 @@ const StudentTable = () => {
             cell: row => <div className="d-flex align-items-center gap-2">
                 <button data-bs-toggle="modal" data-bs-target="#updateModal" className="btn btn-outline-primary rounded-0 btn-sm"><BiEditAlt /></button>
                 <button className="btn btn-outline-danger rounded-0 btn-sm"><BiTrash /></button>
-                <button className="btn btn-outline-secondary rounded-0 btn-sm"><BsEyeFill /></button>
+                <button className="btn btn-outline-danger rounded-0 btn-sm"><BiTrash /></button>
+                {/* <Link to={`/students-view/${row.id}`} target="_new" className="btn btn-outline-secondary rounded-0 btn-sm"><BsEyeFill /></Link> */}
                 <button className="btn btn-outline-success rounded-0 btn-sm"><FaCheck /></button>
             </div>,
             minWidth: "200px"
@@ -117,7 +119,7 @@ const StudentTable = () => {
 
         },
         {
-            id: 1,
+            id: 2,
             joining_date: '12-12-2024',
             student_name: 'Sabbir hosain',
             father_name: 'Sobuj ali',
