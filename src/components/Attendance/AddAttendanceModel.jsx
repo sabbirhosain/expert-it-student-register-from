@@ -2,20 +2,20 @@ import React from 'react'
 
 const AddAttendanceModel = () => {
   return (
-    <div class="modal fade" id="exampleModal">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content rounded-0">
+    <div className="modal fade" id="exampleModal">
+      <div className="modal-dialog modal-lg">
+        <div className="modal-content rounded-0">
           <form action="">
-            <div class="modal-header">
-              <h6 class="modal-title fs-5" id="exampleModalLabel"> Batch No : EISTS - 01 &emsp;-&emsp; Web Development</h6>
+            <div className="modal-header">
+              <h6 className="modal-title fs-5" id="exampleModalLabel"> Batch No : EISTS - 01 &emsp;-&emsp; Web Development</h6>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               <div className="row">
                 <div className="col-md-4 mb-3">
                   <img src="https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?w=826&t=st=1726582928~exp=1726583528~hmac=f5f57e59f2e03486c4c56b803637cd61e4b87e4306ddb4d9ca92676192667ac2" className='img-thumbnail' alt="student image" />
@@ -61,7 +61,7 @@ const AddAttendanceModel = () => {
                 </div>
               </div>
             </div>
-            <div class="modal-footer justify-content-end">
+            <div className="modal-footer justify-content-end">
               <div className='d-flex gap-2'>
                 <button type="button" className="btn btn-secondary rounded-0">Prev</button>
                 <button type="button" className="btn btn-primary rounded-0">Next</button>

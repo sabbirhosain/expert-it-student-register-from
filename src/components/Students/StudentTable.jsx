@@ -88,8 +88,7 @@ const StudentTable = () => {
             cell: row => <div className="d-flex align-items-center gap-2">
                 <button data-bs-toggle="modal" data-bs-target="#updateModal" className="btn btn-outline-primary rounded-0 btn-sm"><BiEditAlt /></button>
                 <button className="btn btn-outline-danger rounded-0 btn-sm"><BiTrash /></button>
-                <button className="btn btn-outline-danger rounded-0 btn-sm"><BiTrash /></button>
-                {/* <Link to={`/students-view/${row.id}`} target="_new" className="btn btn-outline-secondary rounded-0 btn-sm"><BsEyeFill /></Link> */}
+                <Link to={`/students-view/${row.id}`} target="_new" className="btn btn-outline-secondary rounded-0 btn-sm"><BsEyeFill /></Link>
                 <button className="btn btn-outline-success rounded-0 btn-sm"><FaCheck /></button>
             </div>,
             minWidth: "200px"

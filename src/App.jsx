@@ -19,6 +19,7 @@ import StudentView from "./pages/StudentView";
 import Forget from "./pages/Forget";
 import SendOTP from "./pages/SendOTP";
 import NewPassword from "./pages/NewPassword";
+import Users from "./pages/Users";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/send-otp" element={<SendOTP />} />
         <Route path="/new-password" element={<NewPassword />} />
         <Route path="/" element={<Dashboard />} />
+        <Route path="/users" element={<Users />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/trainer" element={<Trainer />} />
         <Route path="/courses" element={<Courses />} />

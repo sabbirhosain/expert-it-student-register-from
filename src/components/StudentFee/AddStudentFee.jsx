@@ -25,22 +25,22 @@ const AddStudentFee = () => {
     };
 
     return (
-        <div class="modal fade" id="exampleModal">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content rounded-0">
+        <div className="modal fade" id="exampleModal">
+            <div className="modal-dialog modal-lg">
+                <div className="modal-content rounded-0">
                     <form action="">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">
                                 Add Student Course Fee
                             </h1>
                             <button
                                 type="button"
-                                class="btn-close"
+                                className="btn-close"
                                 data-bs-dismiss="modal"
                                 aria-label="Close"
                             ></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <div className="row">
                                 <div className="col-md-6 mb-3">
                                     <label className="form-label">Student Name</label>
@@ -104,10 +104,10 @@ const AddStudentFee = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer justify-content-end">
+                        <div className="modal-footer justify-content-end">
                             <div className='d-flex gap-2'>
-                                <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn btn-secondary rounded-0">Close</button>
-                                <button type="submit" class="btn btn-primary rounded-0">Submit</button>
+                                <button type="button" data-bs-dismiss="modal" aria-label="Close" className="btn btn-secondary rounded-0">Close</button>
+                                <button type="submit" className="btn btn-primary rounded-0">Submit</button>
                             </div>
                         </div>
                     </form>

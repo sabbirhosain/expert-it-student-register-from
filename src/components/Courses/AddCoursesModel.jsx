@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Select from 'react-select';
 
-const UpdateCoursesModel = () => {
+const AddCoursesModel = () => {
     const [userList, setUserList] = useState();
     const [loading, setLoading] = useState(false);
 
@@ -22,16 +22,22 @@ const UpdateCoursesModel = () => {
             borderRadius: "0px",
         }),
     };
+
     return (
-        <div class="modal fade" id="updateModal">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content rounded-0">
+        <div className="modal fade" id="exampleModal">
+            <div className="modal-dialog modal-lg">
+                <div className="modal-content rounded-0">
                     <form action="">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Update Courses</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Create New Courses</h1>
+                            <button
+                                type="button"
+                                className="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <div className="row">
                                 <div className="col-md-6 mb-3">
                                     <label className="form-label">Courses Name</label>
@@ -67,15 +73,19 @@ const UpdateCoursesModel = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="reset" class="btn btn-secondary rounded-0">Reset</button>
-                            <button type="submit" class="btn btn-primary rounded-0">Submit</button>
+                        <div className="modal-footer">
+                            <button type="reset" className="btn btn-secondary rounded-0">
+                                Reset
+                            </button>
+                            <button type="submit" className="btn btn-primary rounded-0">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default UpdateCoursesModel
+export default AddCoursesModel

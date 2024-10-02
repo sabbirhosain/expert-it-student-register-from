@@ -22,9 +22,9 @@ const NewPassword = () => {
                                 <input type={showPassword ? "text" : "password"} className='form-control rounded-0' />
                             </div>
                             <div className="col-md-12 mb-3">
-                                <div class="form-check">
+                                <div className="form-check">
                                     <input onClick={passwordShowToggle} className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" />
-                                    <label class="form-check-label" for="flexCheckIndeterminate">{showPassword ? 'Hide Password' : 'Show Password'}</label>
+                                    <label className="form-check-label" for="flexCheckIndeterminate">{showPassword ? 'Hide Password' : 'Show Password'}</label>
                                 </div>
                             </div>
                             <div className="col-md-12 mt-2">

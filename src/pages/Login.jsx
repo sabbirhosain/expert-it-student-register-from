@@ -18,9 +18,9 @@ const Login = () => {
               </div>
               <div className="col-md-12 mb-3">
                 <div className="d-flex align-items-center justify-content-between">
-                  <div class="form-check">
+                  <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" />
-                    <label class="form-check-label" for="flexCheckIndeterminate"> Remember Password </label>
+                    <label className="form-check-label" for="flexCheckIndeterminate"> Remember Password </label>
                   </div>
                   <Link to='/forget'>Forget Password</Link>
                 </div>

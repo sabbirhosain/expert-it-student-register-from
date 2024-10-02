@@ -26,15 +26,15 @@ const UpdateStudentModel = () => {
         }),
     };
     return (
-        <div class="modal fade" id="updateModal">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content rounded-0">
+        <div className="modal fade" id="updateModal">
+            <div className="modal-dialog modal-lg">
+                <div className="modal-content rounded-0">
                     <form action="">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Update Student Info</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Update Student Info</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <div className="row">
                                 <div className="col-md-6 mb-3">
                                     <label className="form-label">First Name</label>
@@ -110,7 +110,7 @@ const UpdateStudentModel = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer justify-content-between">
+                        <div className="modal-footer justify-content-between">
                             <div className='d-flex gap-2'>
                                 <div className='position-relative'>
                                     <img src={img} style={{ maxWidth: "50px", maxHeight: "50px", objectFit: "cover" }} />
@@ -126,8 +126,8 @@ const UpdateStudentModel = () => {
                                 </div>
                             </div>
                             <div className='d-flex gap-2'>
-                                <button type="reset" class="btn btn-secondary rounded-0">Reset</button>
-                                <button type="submit" class="btn btn-primary rounded-0">Submit</button>
+                                <button type="reset" className="btn btn-secondary rounded-0">Reset</button>
+                                <button type="submit" className="btn btn-primary rounded-0">Submit</button>
                             </div>
                         </div>
                     </form>

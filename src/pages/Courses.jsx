@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import Layout from '../layout/Layout'
 import Select from 'react-select';
-import AddCoursesModel from '../Courses/AddCoursesModel';
-import UpdateCoursesModel from '../Courses/UpdateCoursesModel';
-import CoursesTable from '../Courses/CoursesTable';
-
+import AddCoursesModel from '../components/Courses/AddCoursesModel';
+import UpdateCoursesModel from '../components/Courses/UpdateCoursesModel';
+import CoursesTable from '../components/Courses/CoursesTable';
 const Courses = () => {
   const [userList, setUserList] = useState()
   const [loading, setLoading] = useState(false)
